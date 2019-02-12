@@ -1,6 +1,1 @@
-# data-structures-and-algorithms
-This is a practice repository for code challenges
-
-In this readme, there should exist dates, names of challenges, and the partners I worked with on each challenge if I did at all.
-
-Created 2/11/2019 Aaron Ferris
+This is a folder for All data structures work, containing work from 301 and eventaully 401 in codefellows
