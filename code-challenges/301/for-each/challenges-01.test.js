@@ -158,7 +158,7 @@ const fizzbuzz = (arr) => {
       outArray.push(value)
     }
   }
-  arr.forEach(anon);
+  arr.  (anon);
   return outArray;
 }
 
