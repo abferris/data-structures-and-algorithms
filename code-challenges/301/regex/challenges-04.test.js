@@ -13,7 +13,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  let numCheck = /[0-9]/;
+  return numCheck.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,7 +26,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let checkCapWord = /[A-Z]\w+/g;
+  return str.match(checkCapWord);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,8 +37,15 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
-};
+  const checkRegex = /^[A-J]\w+/g;
+  const arrMod=[];
+   const anon = (str) => {
+     if(str.match(checkRegex))
+      arrMod.push(str);
+   }
+  arr.forEach(anon);
+  return arrMod;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
