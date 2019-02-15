@@ -14,7 +14,7 @@ For example:
 
 const isNum = (input) => {
   let numCheck = /[0-9]/;
-  return numCheck.test(input);
+    return numCheck.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let checkCapWord = /[A-Z]\w+/g;
+  let checkCapWord = /\b[A-Z]\w+/g;
   return str.match(checkCapWord);
 };
 
@@ -60,7 +60,8 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+  let monthCheck =  /(^oct$|^october$|^Oct$|^October$)/
+  return monthCheck.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,7 +75,8 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  const
+  splice
 };
 
 /* ------------------------------------------------------------------------------------------------
