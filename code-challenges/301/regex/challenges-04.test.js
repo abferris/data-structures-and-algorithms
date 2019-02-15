@@ -60,7 +60,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  let monthCheck =  /(^oct$|^october$|^Oct$|^October$)/
+  let monthCheck = /^oct$|^october$|^Oct$|^October$/
   return monthCheck.test(input);
 };
 
@@ -72,13 +72,11 @@ Write a function named noPunctuation that contains a regular expression pattern 
 For example, if given the string "Hello, and have a wonderful day!", the word "Hello, " would not be returned because it is immediately followed by a comma. The word "day!" would not be returned because it is immediately followed by an exclamation point.
 
 The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "a ", "wonderful "].
------------------------------------------------------------------------------------------------- */
+------------------------did not complete, solution from class repo credit harry cogsworth------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  const
-  splice
-};
-
+ return str.match(/\b\w*\s/g)
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -89,10 +87,10 @@ Write a function named hangman which uses the replace method to remove all of th
 The function should return a string containing the consonants in their original positions and underscores where the vowels were previously located.
 
 For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
------------------------------------------------------------------------------------------------- */
+---------------------------------------did not complete, solution from class repo credit harry cogsworth--------------------------------------------------------- */
 
 let hangman = (str) => {
-  // Solution code here...
+  return str.replace(/[aeiou]/g, '_');  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,13 +100,13 @@ Write a function named findShells that takes in the string below and uses a regu
 
 Do not use the vertical bar (pipe) character.
 
-Hint: All of these words end with the letters "ells".
------------------------------------------------------------------------------------------------- */
+Hint: All of these words end with the letters "ells". d
+---------------------------------------------------------------------------------------did not complete, and used class repo to complete--------- */
 
 const seashells = 'She sells seashells by the seashore. The shells she sells are surely seashells. So if she sells shells on the seashore, I\'m sure she sells seashore shells.';
 
 const findShells = (str) => {
-  // Solution code here...
+  return str.match(/[A-z]*ells/g)
 };
 
 /* ------------------------------------------------------------------------------------------------
