@@ -76,11 +76,19 @@ const gruffaloCrumble = {
   ]
 }
 
-
+//use the match method to return an array so you can get the length of what you want to delete, and then use the length of the initial string for the ending part of slice)
 const listFoods = (recipe) => {
   let result = [];
+  //how to look for the measurement
+  let measureCheck= /^\d*\b (\w|-)*\b /
   for(let i=0; i<recipe.ingredients.length; i++) {
-    result.push(recipe.ingredients[i].slice(/^\d*\b (\w|-)*\b /));
+    //grab and save the measurement
+    let measure = recipe.ingredients[i].match(measureCheck);
+    //get the length of what you saved
+    let measureLength = measure[0].length;
+    //get end by slice using said length
+    let ingredient = recipe.ingredients[i].slice(measureLength, recipe.ingredients[i].length);
+    result.push(ingredient)
   }
   return result;
 }
@@ -95,7 +103,16 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+    for(let i=0; i<recipe.ingredients.length; i++) {
+      //split into array
+      let ingredientsParts = recipe.ingredients[i].split(' ');
+      //take out first two elements of array
+      let partsNoMeasure = ingredientsParts.splice(2,ingredientsParts.length);
+      //join them
+      let ingredient = partsNoMeasure.join(' ');
+      //push them
+      result.push(ingredient);
+    }
   return result;
 }
 
@@ -111,7 +128,10 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  for(let i=0; i<recipe.steps.length; i++) {
+    let stepSplit = recipe.steps[i].split(' ');
+    result.push(stepSplit[0]);
+  }
   return result;
 }
 
@@ -129,7 +149,11 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+  for (let i=arr.length; i>=0; i--){
+    if(!(arr[i]%2)){
+      arr.splice(i,1)
+    }
+  } 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -148,7 +172,13 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-  // Solution code here...
+  if(numberOfCharacters>str.length){
+    return('')
+  }else if(!numberOfCharacters){
+    return(str)
+  }else {
+    return(str.slice(0,str.length-numberOfCharacters));
+  }
 };
 
 
@@ -160,7 +190,11 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 
 const totalSumCSV = (str) => {
   let total = 0;
-  // Solution code here...
+    let strSplit= str.split(',')
+    const anon = (value) => {
+      total+=parseInt(value);
+    }
+    strSplit.forEach(anon);
   return total;
 };
 
@@ -174,7 +208,15 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 const removeVowels = (str) => {
-  // Solution code here...
+  let strSplit= str.split('');
+  const checkRegex = /a|e|i|o|u/;
+  for (let i=strSplit.length-1; i>=0; i--){
+    if(strSplit[i].match(checkRegex)){
+      strSplit.splice(i,1);
+    }
+  }  
+  str = strSplit.join('');
+  return str
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -186,9 +228,24 @@ For example, extractVowels('gregor') returns ['grgr', 'eo'].
 
 Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioou']
 ------------------------------------------------------------------------------------------------ */
-
 const extractVowels = (str) => {
-  // Solution code here...
+  let arr = str.split('');
+  const arr1 =[];
+  const arr2 = [];
+  const checkRegex = /a|e|i|o|u/;
+  for (let i=0; i<arr.length; i++){
+    if(arr[i].match(checkRegex)){
+      arr1.push(arr[i]);
+    } 
+  }  
+  for (let i=0; i<arr.length; i++){
+    if(arr[i].match(checkRegex)){
+      arr2.push(arr[i]);
+    } 
+  }  
+  let str1 = arr1.join('');
+  let str2 = arr2.join('');
+  return([str2,str1]);
 };
 
 /* ------------------------------------------------------------------------------------------------
