@@ -88,7 +88,7 @@ const listFoods = (recipe) => {
     let measureLength = measure[0].length;
     //get end by slice using said length
     let ingredient = recipe.ingredients[i].slice(measureLength, recipe.ingredients[i].length);
-    result.push(ingredient)
+    result.push(ingredient);
   }
   return result;
 }
@@ -236,13 +236,10 @@ const extractVowels = (str) => {
   for (let i=0; i<arr.length; i++){
     if(arr[i].match(checkRegex)){
       arr1.push(arr[i]);
-    } 
+    }   
+    else{arr2.push(arr[i])}
   }  
-  for (let i=0; i<arr.length; i++){
-    if(arr[i].match(checkRegex)){
-      arr2.push(arr[i]);
-    } 
-  }  
+  arr1.sort(); 
   let str1 = arr1.join('');
   let str2 = arr2.join('');
   return([str2,str1]);
