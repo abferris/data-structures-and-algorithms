@@ -94,8 +94,8 @@ Write a function named hasChildrenValues that uses Object.values to determine if
 This function should take in an array of data and a character name and return a Boolean.
 
 For example: 
-hasChildrenValues(characters, 'Sansa') will return true 
-hasChildrenValues(characters, 'Eddard') will return false
+hasChildrenValues(characters, 'Daenareys') will return true 
+hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
@@ -105,11 +105,9 @@ const hasChildrenValues = (arr, character) => {
     if(charObj[0]===character){
       if(charObj[2].length>0){
         result= true;
-      }
-      else{ 
+      } else{ 
         result= false;
       }
-
     }
   });
   return result
