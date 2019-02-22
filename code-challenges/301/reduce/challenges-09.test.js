@@ -9,11 +9,10 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  let length = arr.reduce( (acc,val,idx) => {
+  return arr.reduce( (acc,val,idx) => {
     acc++  ;
      return acc;
      }, 0);  
-     return length
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,10 +72,11 @@ let starWarsData = [{
 }]
 
 const returnNames = (arr) => {
-let names = arr.reduce((cast,char,idx) =>{
-  cast[idx]= char.name;
-  return cast
-}, 0);
+return arr.reduce((cast,char,idx) =>{
+cast.push(char.name);
+  return cast;
+  }, []);
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -86,8 +86,12 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (arr) => {
-  // Solution code here...
+const reversedString = (str) => {
+  let arr = str.split('')
+  let back = arr.reduce( (madeStr, letter) => {
+    return letter + madeStr;
+  }, '')
+  return back
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -140,7 +144,10 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  return arr.reduce((totKids,char, idx) => {
+    if(char.children) { totKids+= char.children.length}
+      return totKids;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -152,7 +159,10 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+  let sum = arr.reduce((tot,value) => {
+    return tot+value;
+  }, 0)
+  return sum/arr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -173,8 +183,13 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
-}
+  return arr.reduce((primes,value) =>{
+    if(isPrime(value)){
+       primes++;
+    };
+    return primes;
+  },0);
+} 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
