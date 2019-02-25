@@ -25,7 +25,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  let vowelcheck = /a|e|i|o|u/
+  let vowelcheck = /a|e|i|o|u/i
   let vowels = arr.filter( (val) => vowelcheck.test(val) );
   return vowels
 };
@@ -44,8 +44,7 @@ const notInFirstArray = (forbiddenValues, arr) => {
   forbiddenValues.forEach( (value,idx) =>{
     forbidden[value] = true;
   })
-  let notRepeat = arr.filter( (val) => !forbidden[val]);
-  return notRepeat;
+  return arr.filter( (val) => !forbidden[val]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -88,8 +87,7 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
-    let goodStats = arr.filter( (value) => value.baseStat>minBaseStat)
-    return goodStats;
+    return arr.filter( (value) => value.baseStat>minBaseStat)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -101,8 +99,8 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  let goodStats = arr.filter( (value) => value.baseStat>minBaseStat)
-  return goodStats.map((value, idx) => value.stat.name)
+  return arr.filter( (value) => value.baseStat>minBaseStat)
+    .map((value, idx) => value.stat.name)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -155,8 +153,7 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  let heirless = arr.filter((val) => !val.children)
-  return heirless;
+  return arr.filter((val) => !val.children)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -168,17 +165,9 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
-  let evenOrOdd= []
-  let lettercheck = /A-z/
-  let noLetters = arr.filter((val) => !lettercheck);
-  return noLetters  
-   noLetters.forEach((val)=> {
-     if (val%2){
-       evenOrOdd.push(odd)
-     } else {
-       evenOrOdd.push(even)
-     }
-   })
+  let noLetters = arr.filter((val) => typeof val === 'number')
+    .map((val) => val % 2 === 0 ? 'even' : 'odd')
+    return noLetters
 };
 
 /* ------------------------------------------------------------------------------------------------
