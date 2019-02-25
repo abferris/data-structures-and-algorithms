@@ -13,13 +13,8 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   let total=0;
-  input.forEach((arr) => { 
-    let filterTarget =arr.filter( num=> num===target);
-    total+=filterTarget.length;
-  });
+  input.forEach((arr) => total += arr.filter( num=> num===target).length);
   return total;
-  // console.log(onlyTarget);
-  // return onlyTarget.forEach((arr) => count+=arr.length);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,13 +29,10 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   let total=0
-  input.forEach((arr) =>{
-    let value = arr.reduce((acc,val) => {
+  input.forEach((arr) => total += arr.reduce((acc,val) => {
     acc += val
      return acc;
-    }, 0 )
-    total+= value
-  } )
+    }, 0 ))
   return total
 };
 
@@ -58,11 +50,7 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   const endpoint= [];
-  input.forEach((arr) => {
-    let arrFilter= arr.filter( num => typeof num === 'number' && num%5 === 0);
-    let arrFilterPower = arrFilter.map(val => Math.pow(2,val));
-    endpoint.push(arrFilterPower);
-  }); 
+  input.forEach((arr) => endpoint.push(arr.filter( num => typeof num === 'number' && num%5 === 0).map(val => Math.pow(2,val)))); 
   return endpoint;
 };
 
