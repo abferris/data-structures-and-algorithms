@@ -117,7 +117,9 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  let product = 1;
+  numbers.forEach( arr => arr.forEach(value => product *= value))
+  return product
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,7 +139,14 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  let valueCount=0;
+  let accTemp =0;
+  weather.forEach( (arr) =>{
+    valueCount += arr.length;
+    arr.forEach(value => accTemp+=value)
+  })
+  let avg = accTemp/valueCount;
+  return avg;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -158,7 +167,14 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  let mrFarenheight = 200;
+  weather.forEach( arr =>{
+    let avg = 0;
+    arr.forEach(value => avg+= value)
+    avg /=arr.length;
+    if (avg<mrFarenheight){mrFarenheight = avg}
+  })
+  return mrFarenheight
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -174,7 +190,17 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  // Solution code here...
+  let split = str.split('\n');
+  
+  split.forEach((str, idx) => {
+    split[idx] = str.split(',')
+    split[idx] = split[idx].reduce((acc,val) => {
+      acc += parseInt(val);
+      return acc
+    }, 0)
+  })
+  return split
+
 }
 
 /* ------------------------------------------------------------------------------------------------
