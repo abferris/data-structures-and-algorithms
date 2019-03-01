@@ -9,7 +9,7 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
-  // Solution code here...
+  return arr.map(str => str.charAt(0).toUpperCase() + str.substring(1,str.length));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -84,7 +84,13 @@ let starWarsData = [{
 }]
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  let bigger =[];
+  arr.forEach(obj =>{
+    if(parseInt(obj.mass)>parseInt(starWarsData[0].mass)){
+      bigger.push(obj.name);
+    }
+  })
+  return bigger.join(' - ')
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,7 +108,15 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  if (property === 'price'){
+    return arr.sort( function(a, b){ 
+      return a.price > b.price;
+    }) 
+  } else {
+    return arr.sort(function(a,b){
+      return a.name>b.name;
+    })
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +132,8 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-// Solution code here...
+  let regex = /^https:\/\//
+  return regex.test(url);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -141,7 +156,26 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+ 
+    board.forEach((array) => {
+      if (array[0]===array[1]&&array[1]===array[2]&& array[0].length===1)
+        { return true}
+    })
+    //up and down
+    for (let i=0; i<3; i++){
+      if (board[0][i]=== board[1][i] && board[2][i]=== board[1][i] && board[0][i].length===1){
+         return true
+        }
+      }
+    
+    //diagonals
+    if(board[0][0]=== board[1][1] && board[1][1]=== board[2][2] && board[0][0].length===1){
+      return true;
+    }
+    if(board[0][2]=== board[1][1] && board[1][1]=== board[2][0] && board[0][2].length===1){
+      return true
+    }
+    return false
 }
 
 /* ------------------------------------------------------------------------------------------------
