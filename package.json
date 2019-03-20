@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "lint": "eslint **/*.js",
-    "test": "jest --coverage --verbose",
     "watch": "jest --watchAll --coverage --verbose",
+    "test":"jest --coverage --verbose --testPathIgnorePatterns code-challenges/301/",
     "jsdoc": "jsdoc -c .docs/config/jsdoc.config.json"
   },
   "author": "Aaron Ferris",
