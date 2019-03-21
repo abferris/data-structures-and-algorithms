@@ -14,7 +14,7 @@ Return idx of result or -1
 * Define length as the length of the array.
 * Initiate while loop condition length>0
   * Define half to be half of length
-  * Using array @ idx of half
+  * Using array @ idx of half+start
     * if it equals key value result
       * result equals half+start
       * Break loop
