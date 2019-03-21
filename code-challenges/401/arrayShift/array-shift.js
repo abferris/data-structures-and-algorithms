@@ -4,7 +4,7 @@
 
 const shift = module.exports = {};
 
-
+//initial function
 shift.arrayshift = function (...inputs) {
   let newArr=[];
   const arr = inputs[0];
