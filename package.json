@@ -7,7 +7,7 @@
     "start": "node index.js",
     "lint": "eslint **/*.js",
     "watch": "jest --watchAll --coverage --verbose",
-    "test":"jest --coverage --verbose --testPathIgnorePatterns code-challenges/301/",
+    "test": "jest --coverage --verbose --testPathIgnorePatterns code-challenges/301/",
     "jsdoc": "jsdoc -c .docs/config/jsdoc.config.json"
   },
   "author": "Aaron Ferris",

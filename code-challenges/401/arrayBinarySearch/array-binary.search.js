@@ -4,7 +4,7 @@
 const search = module.exports = {};
 
 
-function binarysearch(arr, key){
+search.binarysearch = function(arr, key){
   // setting up start conditions
   let result =-1;
   let start = 0;
@@ -25,4 +25,4 @@ function binarysearch(arr, key){
     }
   }
   return result;
-}
+};
