@@ -1,6 +1,6 @@
 'use strict';
 //import
-const search = require('../array-binary.search.js')
+const search = require('../../arrayBinarySearch/array-binary.search');
 //constants
 const baseArray = [2,5,6,8,20,46,73,122,467];
 const keyOne = 8;
