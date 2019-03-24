@@ -7,7 +7,7 @@
     "start": "node index.js",
     "lint": "eslint **/*.js",
     "watch": "jest --watchAll --coverage --verbose",
-    "test": "jest --coverage --verbose --testPathIgnorePatterns code-challenges/301/",
+    "test": "jest --coverage --verbose",
     "jsdoc": "jsdoc -c .docs/config/jsdoc.config.json"
   },
   "author": "Aaron Ferris",
@@ -15,6 +15,7 @@
   "dependencies": {
     "eslint": "^5.15.3",
     "jest": "^24.5.0",
+    "jsdoc": "^3.5.5",
     "lint": "^1.1.2"
   }
 }
