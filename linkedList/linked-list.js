@@ -11,6 +11,7 @@ class LinkedList {
   constructor(){
     this.head=null;
   }
+  
   /**
    * @param  {} input
    * @param  {} {if(!input
@@ -25,6 +26,7 @@ class LinkedList {
     this.head = newNode;
     
   }
+
   /**
    * @param  {} input
    * @param  {} {letcurrentNode=this.head;while(currentNode
@@ -43,6 +45,7 @@ class LinkedList {
     return false;
 
   }
+
   /**
    * @param  {} {letoutput=[];letcurrent=this.head;while(current
    * @param  {} {output.push(current.val
@@ -56,7 +59,10 @@ class LinkedList {
     }
     return output;
   }
+
+
 }
+
 
 
 module.exports = {LinkedList};
