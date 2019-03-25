@@ -11,6 +11,11 @@ class LinkedList {
   constructor(){
     this.head=null;
   }
+  /**
+   * @param  {} input
+   * @param  {} {if(!input
+   * @param  {} returnnull;letnewNode=newNode(input
+   */
   insert(input){
 
     if(!input) return null;
@@ -20,7 +25,11 @@ class LinkedList {
     this.head = newNode;
     
   }
-
+  /**
+   * @param  {} input
+   * @param  {} {letcurrentNode=this.head;while(currentNode
+   * @param  {} {if(currentNode.val===input
+   */
   includes(input){
     let currentNode = this.head;
     while(currentNode){
@@ -34,7 +43,10 @@ class LinkedList {
     return false;
 
   }
-
+  /**
+   * @param  {} {letoutput=[];letcurrent=this.head;while(current
+   * @param  {} {output.push(current.val
+   */
   print(){
     let output = [];
     let current = this.head;

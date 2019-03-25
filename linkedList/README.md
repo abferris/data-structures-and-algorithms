@@ -1,44 +1,27 @@
-![CF](http://i.imgur.com/7v5ASc8.png) Linked-List
-=================================================
+# DSA LINKED LIST
+DSA 1: linked list
+March 24, 2019
+## Challenge
+The challenge is to create a linked list, add a method to add values to it, add a method to search for a value, and a method to print the value
 
-## DSA Linked-LIst
+## Approach 
 
-### Author: Student/Group Name
+Create a class for linked list with a propety head: null.
 
-### Links and Resources
-* [pull request](http://xyz.com)
-* [travis](http://xyz.com)
+subsequent added nodes reference a node class with a value and a next 
 
+ first have their next set to the head of the linked list, then define the head of the linked list as the node.
 
-#### Documentation
-* [jsdoc](http://xyz.com) (All assignments)
+ You end up with what is basically nested objects (object-ception if you will)
 
-### Modules
-#### `modulename.js`
-##### Exported Values and Methods
+your search function will set a value of current to start as head. while current has a value that is not null, run the following. if current's value = input return true, otherwise  set current to equal current.next
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+your print function should start with a variable current at the head. while current exists (is not null) document it. output starts as an empty array, or a string This could be done by adding it to a output or simply logging the console.
 
-###### `bar(array) -> array`
-Usage Notes or examples
-
-### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
-
-#### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
-  
-#### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
-
-#### UML
-Link to an image of the UML for your application and response to events
+[x]Can successfully instantiate an empty linked list
+[x]Can properly insert into the linked list
+[x]The head property will properly point to the first node in the linked list
+[x]Can properly insert multiple nodes into [x]the linked list
+[x]Will return true when finding a value within the linked list that exists
+[x]Will return false when searching for a value in the linked list that does not exist
+[x]Can properly return a collection of all the values that exist in the linked list
