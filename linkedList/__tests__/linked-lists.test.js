@@ -83,3 +83,63 @@ describe('linked list module print method ', () => {
     expect(newLL.print()).toEqual(['LOL', 'ama', 'Stylish', 'Cool J']);
   });
 });
+
+
+describe('linked list module append method ', () => {
+  it('Can successfully add a node to the end of the linked list', () => {
+    let newLL = new linkedList.LinkedList();
+    newLL.insert(keyTwo);
+    newLL.insert(keyThree);
+    newLL.append(keyFour);
+    expect(newLL.print()).toEqual(['Stylish', 'Cool J', 'ama']);
+  });
+
+  it('Can successfully add multiple nodes to the end of a linked list', () => {
+    let newLL = new linkedList.LinkedList();
+    newLL.insert(keyTwo);
+    newLL.append(keyThree);
+    newLL.append(keyFour);
+    newLL.append(keyFive);
+
+    expect(newLL.print()).toEqual(['Cool J', 'Stylish', 'ama', 'LOL']);
+  });
+});
+
+
+describe('Insert Before and After Modules', () => {
+  it('Can successfully insert a node before a node located in the middle of a linked list ', () => {
+    let newLL = new linkedList.LinkedList();
+    newLL.insert(keyTwo);
+    newLL.insert(keyThree);
+    newLL.insertBefore(keyTwo, keyFour);    
+    console.log(newLL);
+
+    expect(newLL.print()).toEqual(['Stylish', 'ama', 'Cool J']);
+  });
+
+  it('Can successfully insert a node before the first node of a linked list', () => {
+    let newLL = new linkedList.LinkedList();
+    newLL.insert(keyTwo);
+    newLL.insert(keyThree);
+    newLL.insertBefore( keyThree, keyFour);
+    expect(newLL.print()).toEqual(['ama', 'Stylish', 'Cool J']);
+  });
+
+
+  it('Can successfully insert after a node in the middle of the linked list', () => {
+    let newLL = new linkedList.LinkedList();
+    newLL.insert(keyTwo);
+    newLL.insert(keyThree);
+    newLL.insertAfter(keyThree, keyFour);
+    expect(newLL.print()).toEqual(['Stylish', 'ama', 'Cool J']);
+  });
+ 
+  it('Can successfully insert a node after the last node of the linked list', () => {
+    let newLL = new linkedList.LinkedList();
+    newLL.insert(keyTwo);
+    newLL.insert(keyThree);
+    newLL.insertAfter(keyTwo, keyFour);
+    expect(newLL.print()).toEqual(['Stylish', 'Cool J', 'ama']);  
+  });
+
+});
