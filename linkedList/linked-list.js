@@ -11,7 +11,7 @@ class LinkedList {
   constructor(){
     this.head=null;
   }
-  
+
   /**
    * @param  {} input
    * @param  {} {if(!input
@@ -27,19 +27,75 @@ class LinkedList {
     
   }
 
+  
   /**
    * @param  {} input
-   * @param  {} {letcurrentNode=this.head;while(currentNode
-   * @param  {} {if(currentNode.val===input
+   * @param  {} {letcurrent=this.head;while(current.next
+   * @param  {} {current=current.next;}letnewNode=newNode(input
+   */
+  append(input){
+    let current = this.head;
+    if(!current){
+      let newNode = new Node(input);
+      current.next= newNode;
+      return;
+    }
+    while(current.next){
+      current = current.next;
+    }
+    let newNode = new Node(input);
+    current.next= newNode;
+  }
+
+  insertBefore(input,newVal){
+    let current = this.head;
+    if(current.val===input){
+      const newNode = new Node(newVal);
+      newNode.next = current;
+      this.head= newNode;
+    }
+    while(current.next){
+      if (current.next.val==input){
+        const newNode = new Node(newVal);
+        newNode.next = current.next;
+        current.next = newNode;
+        return true;
+      } else {
+        current = current.next;
+      }
+    }
+    return false;
+  }
+
+  insertAfter(input,newVal){
+    let current = this.head;
+    while(current){
+      if (current.val===input){
+        const newNode = new Node(newVal);
+
+        newNode.next = current.next;
+        current.next = newNode;
+        return true;
+      } else {
+        current = current.next;
+      }
+    }
+    return false;
+  }  
+
+  /**
+   * @param  {} input
+   * @param  {} {letcurrent=this.head;while(current
+   * @param  {} {if(current.val===input
    */
   includes(input){
-    let currentNode = this.head;
-    while(currentNode){
-      if(currentNode.val===input) {
+    let current = this.head;
+    while(current){
+      if(current.val===input) {
         return true;
       }
       else {
-        currentNode=currentNode.next;
+        current=current.next;
       }
     }
     return false;
@@ -60,8 +116,33 @@ class LinkedList {
     return output;
   }
 
+  kthFromEnd(k){
+    if(k<1)
+    {return null;}
+    if(this.head.next===null && k===1){
+      return this.head.val;
+    }
+    let frontRunner = this.head;
+    let counter=1;
+    while(counter<=k){
+      if(!frontRunner){
+        return null;
+      }
+      frontRunner=frontRunner.next;
+      counter++;
+      // console.log(counter, k);
+    }
+    let backRunner = this.head;
+    while(frontRunner){
+      backRunner = backRunner.next;
+      frontRunner = frontRunner.next;
+    }
+    return backRunner.val;
+  }
 
 }
+
+
 
 
 

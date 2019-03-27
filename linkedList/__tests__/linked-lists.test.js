@@ -112,7 +112,6 @@ describe('Insert Before and After Modules', () => {
     newLL.insert(keyTwo);
     newLL.insert(keyThree);
     newLL.insertBefore(keyTwo, keyFour);    
-    console.log(newLL);
 
     expect(newLL.print()).toEqual(['Stylish', 'ama', 'Cool J']);
   });
@@ -140,6 +139,40 @@ describe('Insert Before and After Modules', () => {
     newLL.insert(keyThree);
     newLL.insertAfter(keyTwo, keyFour);
     expect(newLL.print()).toEqual(['Stylish', 'Cool J', 'ama']);  
+  });
+
+});
+
+
+
+describe('kth from the end module', () => {
+  let baseLL = new linkedList.LinkedList();
+  baseLL.insert(keyTwo);
+  baseLL.insert(keyThree);
+  baseLL.insert(keyFour);
+  baseLL.insert(keyFive);
+
+  it('Where K is greater than the length of the list ', () => {
+    expect(baseLL.kthFromEnd(5)).toEqual(null);
+  });
+
+  it('Where k and the length of the list are the same', () => {
+    expect(baseLL.kthFromEnd(4)).toEqual('LOL');
+  });
+
+  it('Where k is not a positive integer', () => {
+    expect(baseLL.kthFromEnd(-1)).toEqual(null);
+  });
+ 
+  it('Where the linked list is of a size 1', () => {
+    let newLL = new linkedList.LinkedList();
+    newLL.insert(keyTwo);
+    console.log(newLL.head.next, newLL);
+    expect(newLL.kthFromEnd(1)).toEqual('Cool J');  
+  });
+
+  it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+    expect(baseLL.kthFromEnd(2)).toEqual('Stylish');  
   });
 
 });
