@@ -63,9 +63,8 @@ To insert a value k values away from the end, iterate from the head for k values
 
 #### Challenge 4
 
-
-[x]Same length
-[x] A < B
-[x] B > A
-[x] One of the inputs has no length
-![whiteboard05](.assets/merge.jpg)
+[x]Same length  
+[x] A < B  
+[x] B > A  
+[x] One of the inputs has no length  
+![whiteboard04](./assets/merge.jpg)

@@ -176,26 +176,24 @@ describe('kth from the end module', () => {
   });
 
   describe('merge module. will do insertions', () => {
-
-
-    let llb = new linkedList.LinkedList();
-    llb.insert(7);
-    llb.insert(6);
-    llb.insert(5)
-  
-    it('llb.length = lla.length ', () => {
-      let lla = new linkedList.LinkedList();
+    let lla = new linkedList.LinkedList();
     lla.insert(4);
     lla.insert(3);
     lla.insert(2);
     lla.insert(1);
+
+    let llb = new linkedList.LinkedList();
+    llb.insert(7);
+    llb.insert(6);
+    llb.insert(5);
+  
+    it('llb.length = lla.length ', () => {
+
   
     let llb = new linkedList.LinkedList();
-    llb.insert(4);
-    llb.insert(3);
-    llb.insert(2);
-    llb.insert(1);
-    let llc= lla.merge(lla,llb);
+ 
+    let llc= merge(lla,lla);
+    
       expect(llc).toEqual([1,1,2,2,3,3,4,4]);
     });
   
