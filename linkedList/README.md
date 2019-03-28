@@ -41,6 +41,7 @@ To insert a value k values away from the end, iterate from the head for k values
 [x] Will return true when finding a value within the linked list that exists  
 [x] Will return false when searching for a value in the linked list that does not exist  
 [x] Can properly return a collection of all the values that exist in the linked list  
+
 #### Challenge 2
 [x] Can successfully add a node to the end of the linked list  
 [x] Can successfully add multiple nodes to the end of a linked list  
@@ -48,14 +49,23 @@ To insert a value k values away from the end, iterate from the head for k values
 [x] Can successfully insert a node before the first node of a linked list  
 [x] Can successfully insert after a node in the middle of the linked list  
 [x] Can successfully insert a node after the last node of the linked list 
-![whiteboard02](./)
+![whiteboard02](./assets/insertappend.jpg)
+![whiteboard03](./assets/insertappend2.jpg)
 
-#### Callenge 3
+#### Challenge 3
 [x]Where k is greater than the length of the linked list  
 [x] Where k is not a positive integer  
 [x] Where the length of the list is equal to k  
 [x] Where the linked list is of a size 1   
 [x] Can successfully add a node to the end of the linked list  
 [x] “Happy Path” where k is not at the end, but somewhere in the middle of the linked list Can successfully add a node to the end of the linked list  
+![whiteboard04](./assets/kthfromend.jpg)
 
-![whiteboard03]
+#### Challenge 4
+
+
+[x]Same length
+[x] A < B
+[x] B > A
+[x] One of the inputs has no length
+![whiteboard05](.assets/merge.jpg)
