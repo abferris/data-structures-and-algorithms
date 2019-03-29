@@ -1,6 +1,7 @@
 'use strict';
 //import
 const linkedList = require('../linked-list.js');
+const merge = require('../merge');
 
 //constants
 const keyOne = null;
@@ -188,28 +189,25 @@ describe('kth from the end module', () => {
     llb.insert(5);
   
     it('llb.length = lla.length ', () => {
-
-  
-    let llb = new linkedList.LinkedList();
  
-    let llc= merge(lla,lla);
+    let llc= merge.(lla);
     
       expect(llc).toEqual([1,1,2,2,3,3,4,4]);
     });
   
-    it('llb.length > lla.length', () => {
-      expect(baseLL.kthFromEnd(4)).toEqual('LOL');
-    });
+    // it('llb.length > lla.length', () => {
+    //   expect(baseLL.kthFromEnd(4)).toEqual('LOL');
+    // });
   
-    it('lla.length > llb.length', () => {
-      expect(baseLL.kthFromEnd(-1)).toEqual(null);
-    });
+    // it('lla.length > llb.length', () => {
+    //   expect(baseLL.kthFromEnd(-1)).toEqual(null);
+    // });
   
-    it('Where one linked does not exist', () => {
-      let newLL = new linkedList.LinkedList();
-      newLL.insert(keyTwo);
-      expect(newLL.kthFromEnd(1).toEqual('Cool J'));  
-    });
+    // it('Where one linked does not exist', () => {
+    //   let newLL = new linkedList.LinkedList();
+    //   newLL.insert(keyTwo);
+    //   expect(newLL.kthFromEnd(1).toEqual('Cool J'));  
+    // });
   });
   
 });
