@@ -1,6 +1,7 @@
 'use strict';
 //import
 const linkedList = require('../linked-list.js');
+const merge = require('../merge');
 
 //constants
 const keyOne = null;
@@ -167,50 +168,46 @@ describe('kth from the end module', () => {
   it('Where the linked list is of a size 1', () => {
     let newLL = new linkedList.LinkedList();
     newLL.insert(keyTwo);
-    expect(newLL.kthFromEnd(1).toEqual('Cool J'));  
+    console.log(newLL.head.next, newLL);
+    expect(newLL.kthFromEnd(1)).toEqual('Cool J');  
   });
 
   it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
     expect(baseLL.kthFromEnd(2)).toEqual('Stylish');  
   });
 
-
-describe('merge module. will do insertions', () => {
- 
-
-  let llb = new linkedList.LinkedList();
-  llb.insert(7);
-  llb.insert(6);
-  llb.insert(5)
-
-  it('llb.length = lla.length ', () => {
+  describe('merge module. will do insertions', () => {
     let lla = new linkedList.LinkedList();
-  lla.insert(4);
-  lla.insert(3);
-  lla.insert(2);
-  lla.insert(1);
-    
-  let llb = new linkedList.LinkedList();
-  llb.insert(4);
-  llb.insert(3);
-  llb.insert(2);
-  llb.insert(1);
-  let llc= merge(lla,llb);
-    expect(llc).toEqual([1,1,2,2,3,3,4,4]);
-  });
+    lla.insert(4);
+    lla.insert(3);
+    lla.insert(2);
+    lla.insert(1);
 
-  it('llb.length > lla.length', () => {
-    expect(baseLL.kthFromEnd(4)).toEqual('LOL');
-  });
-
-  it('lla.length > llb.length', () => {
-    expect(baseLL.kthFromEnd(-1)).toEqual(null);
-  });
+    let llb = new linkedList.LinkedList();
+    llb.insert(7);
+    llb.insert(6);
+    llb.insert(5);
+  
+    it('llb.length = lla.length ', () => {
  
-  it('Where one linked does not exist', () => {
-    let newLL = new linkedList.LinkedList();
-    newLL.insert(keyTwo);
-    expect(newLL.kthFromEnd(1).toEqual('Cool J'));  
+    let llc= merge.(lla);
+    
+      expect(llc).toEqual([1,1,2,2,3,3,4,4]);
+    });
+  
+    // it('llb.length > lla.length', () => {
+    //   expect(baseLL.kthFromEnd(4)).toEqual('LOL');
+    // });
+  
+    // it('lla.length > llb.length', () => {
+    //   expect(baseLL.kthFromEnd(-1)).toEqual(null);
+    // });
+  
+    // it('Where one linked does not exist', () => {
+    //   let newLL = new linkedList.LinkedList();
+    //   newLL.insert(keyTwo);
+    //   expect(newLL.kthFromEnd(1).toEqual('Cool J'));  
+    // });
   });
-  })
-})
+  
+});
