@@ -1,5 +1,5 @@
 # DSA LINKED LIST
-DSA 1: linked list
+DSA 2: linked list
 March 24, 2019
 
 [pull request](https://github.com/abferris/data-structures-and-algorithms/pull/37)
@@ -25,30 +25,29 @@ March 24, 2019
 * Below are the whiteboards planning how to do this.
   * Note: clouds are the class. Arrows are properties, and boxes are nodes. If an arrow is unlabeled, it is a next property. Each step shows exactly what is happening.
 * Stacks
-![whiteboard-stacks](https://photos.app.goo.gl/S2aGjFjyRZm63o417)
+![whiteboard-stacks](./assets/stacks.jpg)
 
 * Queues
-![whiteboard-queues](https://photos.app.goo.gl/NRxmKCDKpVT7W2p6A)
+![whiteboard-queues](./assets/queues.jpg)
 
 
 
 ### Tests
-#### Challenge 1
-[x] Can successfully push onto a stack
-[X] Can successfully push multiple nodes onto a stack
-[X] Can successfully pop off the stack
-[X] Can successfully empty a stack after multiple pops.
-[X] Can successfully peek the next item on the stack.
+#### Challenge 1  
+##### Stacks
+[x] Can successfully push onto a stack  
+[X] Can successfully push multiple nodes onto a stack  
+[X] Can successfully pop off the stack  
+[X] Can successfully empty a stack after multiple pops.  
+[X] Can successfully peek the next item on the stack.  
 [X] Can successfully instantiate an empty stack
 
-[Challenge]
-
-#### Challenge 2
-[x] Can successfully enqueue onto a queue
-[X] Can successfully enqueue multiple items into a queue
-[X] Can successfully dequeue off of a queue the expected value
-[X] Can successfully peek into a queue, seeing the expected value
-[X] Can successfully empty a queue after multiple dequeues
+##### Queues  
+[x] Can successfully enqueue onto a queue  
+[X] Can successfully enqueue multiple items into a queue  
+[X] Can successfully dequeue off of a queue the expected value  
+[X] Can successfully peek into a queue, seeing the expected value  
+[X] Can successfully empty a queue after multiple dequeues  
 [X] Can successfully instantiate an empty queue
 
 
