@@ -1,6 +1,6 @@
-# DSA LINKED LIST
-DSA 1: linked list
-March 24, 2019
+# DSA Stacks and Queues
+DSA 2: Stacks and Queues
+March 30, 2019
 
 [pull request](https://github.com/abferris/data-structures-and-algorithms/pull/37)
 ## Challenge 1
