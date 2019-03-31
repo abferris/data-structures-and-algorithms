@@ -1,9 +1,11 @@
-# DSA LINKED LIST
-DSA 2: linked list
-March 24, 2019
+# DSA Stacks and Queues
+DSA 2: Stacks and Queues
+March 30, 2019
 
 [pull request](https://github.com/abferris/data-structures-and-algorithms/pull/37)
 ## Challenge 1
+Completed with Jon Gentry. Recieved assistance explination from Benicio (a night teacher which I do not know his last name).
+
 * Create a stack
   * Should optionally take input and have a top
   * Create the push method 
@@ -49,5 +51,6 @@ March 24, 2019
 [X] Can successfully peek into a queue, seeing the expected value  
 [X] Can successfully empty a queue after multiple dequeues  
 [X] Can successfully instantiate an empty queue
+
 
 
