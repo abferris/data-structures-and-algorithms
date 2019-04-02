@@ -54,14 +54,14 @@ class Pseudoqueue extends Stack{
   enqueue(value){ 
     let tempStack = new Stack();
     while(this.top){
-      let temp = this.top.value;
+      let temp = this.top.data;
       tempStack.push(temp);
       this.pop();
-      console.log(temp,tempStack,this)
     }
     this.push(value);
+
     while(tempStack.top){
-      let temp = tempStack.top.value;
+      let temp = tempStack.top.data;
       this.push(temp);
       tempStack.pop();
     }

@@ -2,7 +2,7 @@
 DSA 2: Stacks and Queues
 April 1, 2019
 
-[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/37)
+[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/39)
 ## Challenge 1
 
 * Create queue-like functions of a stack

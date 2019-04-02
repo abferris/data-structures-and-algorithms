@@ -13,47 +13,46 @@ describe('Psuedoqueue module', () => {
   it('Can successfully push onto a stack', () =>{
     Brady.enqueue('Marcia');
     expect(Brady.top.data).toEqual('Greg');
-    expect(Brady.top.next.data).toEqual('Marcia')
+    expect(Brady.top.next.data).toEqual('Marcia');
    
     
   });
 
-  // it('Can successfully enqueue multiple items into a queue', () =>{
-  //   for(let i = 2; i < keyTwo.length; i++){
-  //     Brady.enqueue(keyTwo[i]);
-  //   }
-  //   let current = Brady.front;
-  //   for(let i = 0; i < keyTwo.length; i++){
-  //     expect(current.data).toEqual(keyTwo[i]);
-  //     current = current.next;
-  //   }
-  //   expect(Brady.rear.data).toEqual('Cindy');
-  // });
+  it('Can successfully enqueue multiple items into a queue', () =>{
+    for(let i = 2; i < keyTwo.length; i++){
+      Brady.enqueue(keyTwo[i]);
+    }
+    let current = Brady.top;
+    console.log(current);
+
+    for(let i = 0; i < keyTwo.length; i++){
+      expect(current.data).toEqual(keyTwo[i]);
+      current = current.next;
+    }
+
+  });
   
   
-  // it('Can successfully dequeue off of a queue the expected value', () =>{
-  //   let goneBrady = Brady.dequeue();
-  //   expect(goneBrady).toEqual('Greg');
-  //   expect(Brady.front.data).toEqual('Marcia');
-  // });
+  it('Can successfully dequeue off of a queue the expected value', () =>{
+    let goneBrady = Brady.dequeue();
+    expect(goneBrady).toEqual('Greg');
+    expect(Brady.top.data).toEqual('Marcia');
+  });
 
-  // it('Can successfully peek into a queue, seeing the expected value', () =>{
+  it('Can successfully peek into a queue, seeing the expected value', () =>{
 
-  //   expect(Brady.peek()).toEqual('Marcia');
-  // });
-  // it('Can successfully empty a queue after multiple dequeues', () =>{
-  //   for(let i = keyTwo.length-1; i >= 0; i--){
-  //     Brady.dequeue();
-  //   }
-  //   expect(Brady.front).toEqual(null);
-  //   expect(Brady.rear).toEqual(null);
-  // });
-  // it('Can successfully instantiate an empty queue', () =>{
-  //   let empty = new Queue();
-  //   expect(empty.front).toEqual(null);
-  //   expect(empty.rear).toEqual(null);
-
-  // });
+    expect(Brady.peek()).toEqual('Marcia');
+  });
+  it('Can successfully empty a queue after multiple dequeues', () =>{
+    for(let i = keyTwo.length-1; i >= 0; i--){
+      Brady.dequeue();
+    }
+    expect(Brady.top).toEqual(null);
+  });
+  it('Can successfully instantiate an empty queue', () =>{
+    let empty = new Pseudoqueue();
+    expect(empty.top).toEqual(null);
+  });
 
 });
 
