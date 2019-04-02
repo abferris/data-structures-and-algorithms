@@ -74,6 +74,8 @@ class Queue{
     }
   }
 
+
+
   // takes no argument and remoe the node off the front of the queue and returns its value
   dequeue(){
     if (!this.front){
@@ -96,5 +98,6 @@ class Queue{
   }
 
 }
+
 
 module.exports = {Queue, Stack};
