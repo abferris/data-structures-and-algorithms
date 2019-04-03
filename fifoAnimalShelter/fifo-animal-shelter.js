@@ -80,31 +80,22 @@ class AnimalShelter{
     this.head=this.head.next;
     toBack.next = null;
     output = toBack;
-    console.log(this, this. head.next.next);
     //while we haven't hit the temp again
-    // while(this.head.type !== temp){
-    //   //store the old head
-    //   toBack = this.head;
-    //   // move the head (this will break the while loop eventaully)
-    //   this.head = this.head.next;
-    //   //remove the old head from the queue
-    //   toBack.next = null;
-    //   //set it behind tail
-    //   this.tail.next = toBack;
-    //   //set it as new tail
-    //   this.tail = toBack;
-    // }
-    // console.log(this.head);
-  //   //remove the old head from the queue
-  //   toBack.next = null;
-  //   //set it behind tail
-  //   this.tail.next = toBack;
-  //   //set it as new tail
-  //   this.tail = toBack;
-  //   //remove the temp as head
-  //   this.head.next =this.head;
-  //   //return result
-  //   return output;
+    while(this.head.type !== temp){
+      //store the old head
+      toBack = this.head;
+      // move the head (this will break the while loop eventaully)
+      this.head = this.head.next;
+      //remove the old head from the queue
+      toBack.next = null;
+      //set it behind tail
+      this.tail.next = toBack;
+      //set it as new tail
+      this.tail = toBack;
+    }
+    this.head.next =this.head;
+    //return result
+    return output;
   }
 }   
 
