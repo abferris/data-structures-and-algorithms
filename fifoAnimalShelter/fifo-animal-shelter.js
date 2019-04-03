@@ -74,14 +74,13 @@ class AnimalShelter{
       //resets the toBack variable
       toBack = this.head;
     }
-    console.log(toBack);
+    output = this.head.type;
     //above will the loop before the last value can be pushed to the tail
     //removes the temp to move to back from the queue
     this.head=this.head.next;
     toBack.next = null;
-    output = toBack;
     //while we haven't hit the temp again
-    while(this.head.type !== temp){
+    while(this.head.type !== 'temp'){
       //store the old head
       toBack = this.head;
       // move the head (this will break the while loop eventaully)
@@ -93,7 +92,7 @@ class AnimalShelter{
       //set it as new tail
       this.tail = toBack;
     }
-    this.head.next =this.head;
+    this.head = this.head.next;
     //return result
     return output;
   }
