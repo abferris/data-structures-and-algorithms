@@ -17,11 +17,11 @@ March 30, 2019
 ## Approach 
 * Below are the whiteboards planning how to do this.
   * Note: clouds are the class. Arrows are properties, and boxes are nodes. If an arrow is unlabeled, it is a next property. Each step shows exactly what is happening.
-* Stacks
-![whiteboard-stacks](./assets/stacks.jpg)
+![whiteboard-stacks](./assets/Domain.jpg)
+![whiteboard-queues](./assets/Visual.jpg)
+![whiteboard-stacks](./assets/NQ.jpg)
+![whiteboard-stacks](./assets/DQ.jpg)
 
-* Queues
-![whiteboard-queues](./assets/queues.jpg)
 
 
 
@@ -34,7 +34,7 @@ March 30, 2019
 [x] Can successfully enqueue a cat 
 [x] Will not enqueue enqueue an animal that isnt a cat or a dog
 [X] Will return null dequeing proper input 
-[ ] Can dequeue from head  
+[X] Can dequeue from head  
 [ ] Can dequeue from further back
 
 Seems my dequeue has some issues to work out I've tried but it doesnt seem to work. Will try to rework it with some feedback.
