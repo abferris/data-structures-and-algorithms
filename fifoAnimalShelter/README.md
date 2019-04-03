@@ -28,14 +28,14 @@ March 30, 2019
 ### Tests
 #### Challenge 1  
 ##### PetShelter
-[x] Can initiate with cat or dog
-[x] Can successfully enqueue a cat 
-[x] Can successfully enqueue a dog
-[x] Can successfully enqueue a cat 
-[x] Will not enqueue enqueue an animal that isnt a cat or a dog
-[X] Will return null dequeing proper input 
-[X] Can dequeue from head  
-[x] Can dequeue from further back
+[x] Can initiate with cat or dog  
+[x] Can successfully enqueue a cat   
+[x] Can successfully enqueue a dog  
+[x] Can successfully enqueue a cat  
+[x] Will not enqueue enqueue an animal that isnt a cat or a dog  
+[X] Will return null dequeing proper input  
+[X] Can dequeue from head   
+[x] Can dequeue from further back  
 
 Seems my dequeue has some issues to work out I've tried but it doesnt seem to work. Will try to rework it with some feedback.
 
