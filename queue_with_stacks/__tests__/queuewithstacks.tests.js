@@ -50,7 +50,7 @@ describe('Psuedoqueue module', () => {
     expect(Brady.top).toEqual(null);
   });
   it('Can successfully instantiate an empty queue', () =>{
-    let empty = new Pseudoqueue();
+    let empty = new Pseudoqueue ();
     expect(empty.top).toEqual(null);
   });
 
