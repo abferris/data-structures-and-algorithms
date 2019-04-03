@@ -2,7 +2,7 @@
 DSA 2: Stacks and Queues
 March 30, 2019
 
-[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/40)
+[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/40)  
 [Travis](https://travis-ci.com/abferris/data-structures-and-algorithms)
 ## Challenge 1
 
