@@ -1,3 +1,7 @@
+'use strict';
+
+
+
 class Node{
   constructor(data){
     this.data = data;
@@ -41,5 +45,33 @@ class Stack{
   peek(){
     return this.top.data;
   }
-
+  
 }
+const bracketValidator = function(string) {
+  if ( typeof(string) ==! 'string'){
+    return false;
+  }
+  let arr = string.split('');
+  let stack = new Stack;
+  if(!arr.length){ return true; }
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i]==='{' || arr[i]==='[' || arr[i]==='('){
+      stack.push(arr[i]);
+    }
+    if(arr[i]==='}' || arr[i]===']' || arr[i]===')'){
+      if (!stack.top){
+        return false;
+      }
+      if((arr[i]==='}' && stack.top.data==='{') || (arr[i]===']' && stack.top.data==='[') || (arr[i]===')' && stack.top.data==='(')){
+        stack.pop();
+      }
+      else {
+        return false;
+      }
+    }
+  }
+  if(stack.top) {return false;}
+  else{ return true;}
+};
+
+module.exports = {Node, Stack, bracketValidator};
