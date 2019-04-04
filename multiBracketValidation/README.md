@@ -42,3 +42,5 @@ April 3, 2019
 [x]unclosed closing brackets: `]`
 [x]closed with wrong bracket: `{]`
 [x]offset brackets: `[(])`
+
+NOTE TO GRADER! I hope that the travis is working alright. If not, please notify me so that we may try to attempt to fix whatever is wrong with travis to make this easier for you to grade 
