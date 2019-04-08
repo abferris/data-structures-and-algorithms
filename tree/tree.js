@@ -20,37 +20,50 @@ class BinaryTree{
 
 
   preOrder (node=this.root, output = []) {
+    
     output.push(node.data);
-    if(node.left) {
+
+    if(node.leftChild) {
       this.preOrder(node.leftChild, output);
     }
-    if(node.right) {
-      node.preOrder(node.rightChild, output);
+    
+    if(node.rightChild) {
+      this.preOrder(node.rightChild, output);
     }
+
     return output;
   }
 
-  inOrder(node=this.root, output = []){
-    if(node.left) {
-      this.inOrder(node.leftChild);
+  inOrder (node=this.root, output = [])  {
+   
+    if(node.leftChild) {
+      this.inOrder(node.leftChild, output);
     }
+
     output.push(node.data);
-    if(node.right) {
-      this.inrder(node.rightChild);
+
+    if(node.rightChild) {
+      this.inOrder(node.rightChild, output);
     }
+    
+    return output;
+  }
+
+  postOrder(node=this.root, output = []){
+
+    if(node.leftChild) {
+      this.inOrder(node.leftChild, output);
+    }
+
+    if(node.rightChild) {
+      this.inOrder(node.rightChild, output);
+    }
+
+    output.push(node.data);
+    
     return output;
   }
   
-  postOrder(node=this.root, output = []){
-    if(node.left) {
-      this.postOrder(node.leftChild);
-    }
-    if(node.right) {
-      this.postOrder(node.rightChild);
-    }
-    output.push(node.data);
-    return output;
-  }
 }
 
 class BinarySearchTree extends BinaryTree{
@@ -60,8 +73,6 @@ class BinarySearchTree extends BinaryTree{
 
   add(value){
     let current = this.root;
-    // let left = current.left;
-    // let right = current.right;
     while(current.data !== null){
       if( value < current.data ){
         if (!current.leftChild) {

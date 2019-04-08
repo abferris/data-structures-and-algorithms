@@ -34,26 +34,25 @@ describe('Binary Search Tree Addition', () => {
 
 
 
-// describe ('Binary Search Tree Traversal', () =>{
-//   test2.add(5);
-//   test2.add(20);
-//   test2.add(1);
-//   test2.add(7);
-//   test2.add(13);
-//   test2.add(23);
-//   it('Can Preform A preorder Traversal', ()=>{
-//     // expect(test.preOrder()).toEqual([10,5,20,1,7,13,23]);
-//     console.log(test.preOrder());
+describe ('Binary Search Tree Traversal', () =>{
+  test2.add(5);
+  test2.add(20);
+  test2.add(1);
+  test2.add(7);
+  test2.add(13);
+  test2.add(23);
+  console.log(test2.root);
 
-//   });
-//   it('Can Preform A inorder Traversal', ()=>{
-//     // expect(test.inOrder()).toEqual([1,5,7,10,13,20,23]);
-//     console.log(test.inOrder());
+  it('Can Preform A preorder Traversal', ()=>{
+    expect(test2.preOrder()).toEqual([10,5,1,7,20,13,23]);
+  });
+  it('Can Preform A inorder Traversal', ()=>{
+    expect(test2.inOrder()).toEqual([1,5,7,10,13,20,23]);
 
-//   });
-//   it('Can Preform A post Traversal', ()=>{
-//     console.log(test.postOrder());
-//     // expect(test.postOrder()).toEqual([1,7,5,13,23,20,10]);
-//   });
+  });
+  it('Can Preform A post Traversal', ()=>{
+    console.log('postorder', test2.postOrder());
+    expect(test2.postOrder()).toEqual([1,7,5,13,23,20,10]);
+  });
 
-// });
+});
