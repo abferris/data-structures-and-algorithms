@@ -2,7 +2,7 @@
 DSA 3: Trees
 April 8, 2019
 
-[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/45)  
+[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/43)  
 [Travis](https://travis-ci.com/abferris/data-structures-and-algorithms)
 
 * Fizzbuzz Function
@@ -18,7 +18,7 @@ April 8, 2019
   * first check and evaluate whether the number should be modified
   * then recursively call it on the left child
   * then recursively call it on the right child
-![UML](./treeuml.jpg)
+![UML](./FBUML.jpg)
 
 
 
