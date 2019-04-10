@@ -89,6 +89,32 @@ class BinaryTree{
     return output;
   }
 
+  maxValue() {
+    const Q = new Queue;
+    Q.enqueue(this.root);
+    let current = Q.front;
+    let output = null;
+    if(!this.root){
+      return output;
+    }
+    while (current){
+      if( output===null || output<current.data.data){
+        output = current.data.data;
+      }
+
+      if (current.data.leftChild){
+        Q.enqueue(current.data.leftChild);
+      }
+
+      if (current.data.rightChild){
+        Q.enqueue(current.data.rightChild);
+      }
+      Q.dequeue();
+      current = Q.front;
+    }
+    return output;
+  }
+
 }
 
 class BinarySearchTree extends BinaryTree{
