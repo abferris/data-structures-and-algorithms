@@ -2,7 +2,7 @@
 DSA 3: Trees
 April 9, 2019
 
-[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/43)  
+[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/44)  
 [Travis](https://travis-ci.com/abferris/data-structures-and-algorithms)
 
 * Breadthprint
