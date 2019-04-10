@@ -1,5 +1,8 @@
 'use strict';
 
+const Queue = require('../../queueandstackweek/stackAndQueue/stacksAndQueues.js').Queue;
+
+
 class Node{
   constructor(data){
     this.data = data;
@@ -60,6 +63,29 @@ class BinaryTree{
 
     output.push(node.data);
     
+    return output;
+  }
+
+  breadthsearch() {
+    const Q = new Queue;
+    Q.enqueue(this.root);
+    let current = Q.front;
+    let output =[];
+    if(!this.root){
+      return output;
+    }
+    while (current){
+      output.push(current.data.data);
+      if (current.data.leftChild){
+        Q.enqueue(current.data.leftChild);
+      }
+
+      if (current.data.rightChild){
+        Q.enqueue(current.data.rightChild);
+      }
+      Q.dequeue();
+      current = Q.front;
+    }
     return output;
   }
 

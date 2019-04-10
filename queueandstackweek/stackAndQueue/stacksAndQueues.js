@@ -64,8 +64,9 @@ class Queue{
   ///takes in a value and adds new node with value to the rear of queue
   enqueue(value){
     if (!this.rear) {
-      this.rear = new Node (value);
-      this.front = new Node (value);
+      let addNode = new Node (value);
+      this.rear = addNode;
+      this.front = addNode;
     } else{
       let newNode = new Node(value);
       this.rear.next = newNode;
