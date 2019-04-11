@@ -2,7 +2,7 @@
 DSA 2: Stacks and Queues
 March 30, 2019
 
-[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/42)  
+[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/44 )  
 [Travis](https://travis-ci.com/abferris/data-structures-and-algorithms)
 ## Challenge 1
 
@@ -38,14 +38,22 @@ March 30, 2019
   * if you did not output in your loop, return the output array
 ![UML](./breadthfirstuml.jpeg)
 
+## Challenge 3
 
-### Tests
-#### Challenge 1  
-##### Binary Tree and BST
-[x] Can successfully instantiate an empty tree  
-[x] Can successfully instantiate a tree with a single root node  
-[x] Can successfully add a left child   
-[x] Can successfully add right child  
-[x] Can successfully return a collection from a preorder traversal  
-[x] Can successfully return a collection from an inorder traversal  
-[ ] Can successfully return a collection from a postorder traversal  
+* Create find max value that works on the binary tree class
+  * takes in no values
+  * runs on the tree
+  * gives back the values breadth first, row by row
+
+## Approach
+* Below is the whiteboard plannign to do this
+* Steps
+  * Utilize a queue.
+  * Enqueue the root.
+  * enqueue the root's left and right child if they exist
+  * change the output if it is smaller than compared root's data
+  * dequeue the head.
+  * continue until your queue is empty
+  * if you did not output in your loop, return the output array
+![UML](./maxValueUML.jpeg)
+
