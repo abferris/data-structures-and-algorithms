@@ -1,5 +1,5 @@
-# DSA PetShelter
-DSA 2: Stacks and Queues
+# DSA Binary trees
+DSA 3
 March 30, 2019
 
 [pull request](https://github.com/abferris/data-structures-and-algorithms/pull/44 )  
