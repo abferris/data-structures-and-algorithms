@@ -22,33 +22,47 @@
 * definition of a sort
 * different sorts for every situation
   * ask them about types of sorts (insertion)
-2) merge sort 
+  * if you have time run # 2
+2) HAVE A STUDENT BE A COMPUTER  
+* ask for a volunteer
+* have volunteer sort an array on a whiteboard of sticky notes
+  * They can only use one hand at a time
+  * They can only compare 2 things at a time
+  * 2 things can not be in one place at a time
+* when a student makes a decision to look at a particular item, ask why?
+  * if they say because it is the smallest, ask what they would have to do as a computer to deterimine it.
+  * what do they have to compare
+  * how many times do they have to compare
+* if they have trouble doing it their way, ask for suggestions from audience for how to
+* if they continue to have trouble  walk them through the closest type of sort they are to
+  * this will usually be insertion sort. if you're not sure default back to this
+3) merge sort 
 * good for larger sets of data
 * efficient for time
 * takes up a lot of space, however space is cheaper than time now with technology
 * conquer and divide
   * what do we do with huge problems?
-    * break it up into smaller problems
+    * break it up into smaller problems  
   * easier to sort smaller pieces than larger pieces
   * when we get to larger pieces, if they are already sorted, we are able to handle them easier.
 * commonly done with recursion
   * what is recursion?
-    * calls itself within the function
+    * calls itself within the function    
     * can use up less time than loops depending on situation
-    * call stack refresher(talked about in 201)
+    * call stack refresher(talked about in 201)  
       * when you call the function inside of itself, the rest of the function is put on hold until the calling of itself is resolved
       * after it returns to finish the rest of it.
 * quick algorithm step through
   * draw it out
   * steps: 
-    * if length of array is greater than 1
+    * if length of array is greater than 1  
       * split into left half and right half
       * run recursively on left half
       * run recursively on right half
       * sort the parts by comparing the fronts (recursively calling)
-    * return the sorted arrays
+    * return the sorted arrays  
   * will need to run through the putting back together of the array every time
-    * compare front of left and right side
+    * compare front of left and right side  
       * push whichever is to output
       * move to next value on whichever you pushed
       * compare values if there
