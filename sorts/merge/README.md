@@ -110,3 +110,6 @@ This function should have:
 [X] A backwards-sorted array returns the array sorted  
 [X] An empty array returns the same empty array  
 [X] An array of one element returns the same single-element array
+Helper function:
+[X] will merge 2 even arrays
+[X] will merge uneven arrays
