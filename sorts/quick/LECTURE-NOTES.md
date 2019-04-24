@@ -59,21 +59,7 @@
       * after it returns to finish the rest of it.
 * quick algorithm step through
   * draw it out
-  * steps: 
-    * if length of array is greater than 1  
-      * split into left half and right half
-      * run recursively on left half
-      * run recursively on right half
-      * sort the parts by comparing the fronts (recursively calling)
-    * return the sorted arrays  
-  * will need to run through the putting back together of the array every time
-    * compare front of left and right side  
-      * push whichever is to output
-      * move to next value on whichever you pushed
-      * compare values if there
-      * if one is empty, push the remnants of the other to array
-* write out algorithm steps if they seem understanding
-  * try to ask them what steps it would be
+be
 ## Diagram
 
 [Visual](https://www.c-programming-simple-steps.com/images/merge-sort-visual.png)
