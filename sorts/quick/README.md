@@ -6,6 +6,7 @@ Author: Aaron Ferris
   
 [pull request](https://github.com/abferris/data-structures-and-algorithms/pull/51)  
 [Travis](https://travis-ci.com/abferris/data-structures-and-algorithms)
+[lesson plan](./LECTURE-NOTES.md)
 
 ## Challenge
 Create a funciton that executes a quick-sort
