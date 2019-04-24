@@ -1,7 +1,7 @@
 
-# Code Challenge 26: Merge Sort 
+# Code Challenge 26: Quick 
 DSA: Sort  
-April 22, 2019  
+April 23, 2019  
 Author: Aaron Ferris  
   
 [pull request](https://github.com/abferris/data-structures-and-algorithms/pull/51)  
