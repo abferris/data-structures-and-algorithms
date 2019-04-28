@@ -3,9 +3,9 @@
 April 28, 2019  
 Author: Aaron Ferris  
   
-[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/54)  
+[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/52)  
 [Travis](https://travis-ci.com/abferris/data-structures-and-algorithms)
-[lesson plan](./LECTURE-NOTES.md)
+[Folder wit hash table content](https://github.com/abferris/data-structures-and-algorithms/tree/hashtable/hashtable)
 
 ## Challenge
 Create a functioning hashtable that will store information correctly and is searchable through a function
