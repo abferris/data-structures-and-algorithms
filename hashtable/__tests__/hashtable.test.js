@@ -8,7 +8,6 @@ let key2 = 'Vanessa';
 let value2 = 'Pong Rival';
 
 let canHash = (val) => {
-  ;
   if(ht.hash(val)>16){
     return false;
   }   
