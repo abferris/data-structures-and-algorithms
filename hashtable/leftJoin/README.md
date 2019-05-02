@@ -6,7 +6,7 @@ Author: Aaron Ferris
   
 [pull request](https://github.com/abferris/data-structures-and-algorithms/pull/55)  
 [Travis](https://travis-ci.com/abferris/data-structures-and-algorithms)
-[Folder with Left Join Content](https://github.com/abferris/data-structures-and-algorithms/tree/hashtable/hashtable)
+[Folder with Left Join Content](https://github.com/abferris/data-structures-and-algorithms/tree/master/hashtable/leftJoin)
 
 ## Challenge:
 * Create a method 
