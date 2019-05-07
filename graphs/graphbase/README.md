@@ -1,11 +1,20 @@
 
 # DSA: Graphs
 April May 5, 2019
-Author: Aaron Ferris  
+Author: Aaron Ferris    
   
-[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/56)  
+[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/57)  
 [Travis](https://travis-ci.com/abferris/data-structures-and-algorithms)
 [Folder wit hash table content](https://github.com/abferris/data-structures-and-algorithms/graphs/graphbase/)
+
+## RESUBMIT INFORMATION
+* I created the initial graph representation as a adjacency matrix instead of an adjacency list. I have remedied this.
+* The approach was to follow the data structure as follows:
+  * The graph should have a list of nodes `(graph.nodes)`
+  * this list of nodes should be accessable by their value `graph.nodes[value]`
+  * those nodes should have a value property and an array of their connections`graph.nodes[value].val/connections`
+  * those node connections should list the connections and their weight `graph.nodes[value].connections[connection]= weight`
+
 
 ## Challenge
 Create a Graph base
@@ -23,20 +32,39 @@ Create a Graph base
 ![Graph notes for getNodes, GetNeighbors and size](./graphs2.jpg)
 
 ### Tests: 
- Graph function
-    ✓ will create a graph (6ms)
-  Graph`s addNode function
-    ✓ will add a node to an empty graph (1ms)
-    ✓ will add a node with a name to a not-empty graph (1ms)
-    ✓ will name and add a node if no name is specified
-  Graph`s addEdge function
-    ✓ will add an edge with a weight (1ms)
-    ✓ will add an edge without a weight (1ms)
-    ✓ will return null trying to add an impossible edge
-  Graph`s getNodes function
-    ✓ will return the nodes  (1ms)
-  Graph`s getNeighbors function
-    ✓ will return an array of connections for a valid input
-    ✓ will return null for an invalid input (1ms)
-  Graph`s size function
-    ✓ will return a graph`s size
+#### Matrix Representational Graph function  
+    ✓ will create a graph (6ms)  
+  Graphs addNode function  
+    ✓ will add a node to an empty graph (1ms)  
+    ✓ will add a node with a name to a not-empty graph (1ms)  
+    ✓ will name and add a node if no name is specified  
+  Graphs addEdge function  
+    ✓ will add an edge with a weight (1ms)  
+    ✓ will add an edge without a weight (1ms)  
+    ✓ will return null trying to add an impossible edge  
+  Graphs getNodes function  
+    ✓ will return the nodes  (1ms)  
+  Graphs getNeighbors function  
+    ✓ will return an array of connections for a valid input  
+    ✓ will return null for an invalid input (1ms)  
+  Graphs size function  
+    ✓ will return a graphs size
+
+#### List Representational Graph Testing:  
+  Graph function  
+    ✓ will create a graph (9ms)  
+  Graphs addNode function  
+    ✓ will add a node to an empty graph (3ms)  
+    ✓ will add a node with a name to a not-empty graph (1ms)  
+    ✓ will return null if no name is specified (1ms)  
+  Graphs addEdge function  
+    ✓ will add an edge with a weight (2ms)  
+    ✓ will add a second edge with a weight (1ms)  
+    ✓ will add an edge without a weight (1ms)  
+    ✓ will return null trying to add an impossible edge    
+  Graphs getNodes function    
+    ✓ will return the nodes  (1ms)  
+  Graphs getNeighbors function    
+    ✓ will return an array of connections for a valid input (1ms)    
+    ✓ will return null for an invalid input (1ms)    
+  Graph`s size function  
