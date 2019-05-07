@@ -3,7 +3,7 @@
 April May 5, 2019
 Author: Aaron Ferris    
   
-[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/57)  
+[pull request](https://github.com/abferris/data-structures-and-algorithms/pull/56)  
 [Travis](https://travis-ci.com/abferris/data-structures-and-algorithms)
 [Folder wit hash table content](https://github.com/abferris/data-structures-and-algorithms/graphs/graphbase/)
 
@@ -14,6 +14,8 @@ Author: Aaron Ferris
   * this list of nodes should be accessable by their value `graph.nodes[value]`
   * those nodes should have a value property and an array of their connections`graph.nodes[value].val/connections`
   * those node connections should list the connections and their weight `graph.nodes[value].connections[connection]= weight`
+* The graph.js is the matrix version
+* the adjList.js is the file that we want
 
 
 ## Challenge
