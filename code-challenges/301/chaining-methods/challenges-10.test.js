@@ -182,8 +182,8 @@ describe('Testing challenge 4', () => {
   });
 });
 
-describe('Testing challenge 5', () => {
-  test('It should return the name of the shortest character', () => {
-    expect(findShortest(starWarsData)).toStrictEqual('R2-D2');
-  });
-});
+// describe('Testing challenge 5', () => {
+//   test('It should return the name of the shortest character', () => {
+//     expect(findShortest(starWarsData)).toStrictEqual('R2-D2');
+//   });
+// });

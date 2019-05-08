@@ -10,16 +10,16 @@ const keyFour = 1;
 //tests
 describe('array binary search module', () =>{
   const biSearch = search.binarysearch;
-  it('should find key in first half', () => {
+  xit('should find key in first half', () => {
     expect(biSearch(baseArray, keyOne)).toEqual([3]);
   });
-  it('should find key in second half', () => {
+  xit('should find key in second half', () => {
     expect(biSearch(baseArray, keyTwo)).toEqual([8]);
   });
-  it('should find key in first half', () => {
+  xit('should find key in first half', () => {
     expect(biSearch(baseArray, keyThree)).toEqual([-1]);
   });
-  it('should find key in first half', () => {
+  xit('should find key in first half', () => {
     expect(biSearch(baseArray, keyFour)).toEqual([-1]);
   });
   

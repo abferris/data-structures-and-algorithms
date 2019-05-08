@@ -19,4 +19,4 @@ const mergeList = function(lla, llb) {
 
 
 
-module.exports = {mergeList};
+module.exports = mergeList;

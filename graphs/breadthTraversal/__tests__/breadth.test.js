@@ -51,8 +51,6 @@ describe('Breadth first method', () => {
   it('will not walk to a disconnected node from the starting point',() => {
     expect(graph3.walk('a')).toEqual(['a','b']);
   });
-  it('will traverse a graph of one node',() => {
 
-  });
 });
 

@@ -29,7 +29,7 @@ t5.add(5);
 
 describe('storeValues function', () =>{
 
-  it('will iterate through a tree and store values', () => {
+  xit('will iterate through a tree and store values', () => {
     store(t1,ht);
     console.log(ht);
     expect(true).toEqual(true);
