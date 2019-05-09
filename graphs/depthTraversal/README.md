@@ -6,7 +6,7 @@ Whiteboard with: Aaron Bruce
   
 [pull request](https://github.com/abferris/data-structures-and-algorithms/pull/59)  
 [Travis](https://travis-ci.com/abferris/data-structures-and-algorithms)
-[Folder wit hash table content](https://github.com/abferris/data-structures-and-algorithms/graphs/depth/)
+[Folder depth first](https://github.com/abferris/data-structures-and-algorithms/graphs/depth/)
 
 
 ## Challenge
