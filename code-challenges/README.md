@@ -25,3 +25,5 @@ Created 2/11/2019 Aaron Ferris
 
 ### 401 Challenges
   * arrayReverse
+
+### Daily
