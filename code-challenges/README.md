@@ -25,3 +25,10 @@ Created 2/11/2019 Aaron Ferris
 
 ### 401 Challenges
   * arrayReverse
+
+### Daily
+
+#### coderbyte
+  * first-factorial
+  * first-reverse
+  * letter-change
