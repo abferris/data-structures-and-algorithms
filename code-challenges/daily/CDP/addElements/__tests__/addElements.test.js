@@ -10,7 +10,7 @@ const arr = [1,2,3,4,4,10];
  const num6 = 20;
 
 
-describe('FirstFactorial Function', () => {
+describe('addElements Function', () => {
 
   it('Will return true when multiple options work', () => {
     expect(addElements(arr, num1)).toEqual(true)
