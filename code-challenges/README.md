@@ -24,11 +24,44 @@ Created 2/11/2019 Aaron Ferris
   * value-vs-reference
 
 ### 401 Challenges
-  * arrayReverse
+  * Array Reverse
+  * Array Binary Search
+  * Graphs
+    * Breadth Traversal
+    * Depth Traversal
+    * Get Edges
+    * Graph Base
+      * Adjacency List 
+      * Adjacency Matrix
+  * Hash Tables
+    * Hash Table 
+    * Intersect Tree
+    * Left Join
+    * Repeated Word
+  * Linked List Week
+    * Linked List Base
+    * Linked List Merge
+  * Queue and Stacks
+    * Queue and Stack Base
+    * Stack With a Queue
+    * Multi Bracket Validation
+    * Fifo Animal Shelter
+  * Sort
+    * Insertion
+    * Merge
+    * Quick
 
 ### Daily
+  * Add Elements
+  * Merge Sorted
 
 #### coderbyte
-  * first-factorial
-  * first-reverse
-  * letter-change
+  * First Factorials
+  * First Reverse
+  * Letter Change
+  * All Longest Strings
+  * Common Character Count
+  * Is Crypt
+  * Is Lucky
+  * Sort by Height
+  * Sudoku
