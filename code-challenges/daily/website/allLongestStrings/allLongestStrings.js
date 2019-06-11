@@ -1,4 +1,7 @@
 function allLongestStrings(inputArray) {
+  if (!inputArray[0]){
+    return []
+  }
   var longestArrays= [inputArray[0]];
   for (var i=1; i<inputArray.length; i++){
       var a= inputArray[i];
@@ -11,7 +14,7 @@ function allLongestStrings(inputArray) {
           longestArrays.push(a)
       }
   }
-  return(longestArrays)
+  return longestArrays
 }
 
 module.exports = allLongestStrings
