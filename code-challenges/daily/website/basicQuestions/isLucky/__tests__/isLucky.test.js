@@ -1,5 +1,5 @@
 'use strict';
-let isLucky = require('../isLucky.js');
+let isLucky = require('../isLucky.js.js');
 //it is assumed that there are no negative numbers in this lucky input
 let test1 = 1230
 let return1 = true
