@@ -23,7 +23,7 @@ function phoneNumber (start, jumps, output = 0){
       output = phoneNumber(adj[i], jumps-1, output)
     }
   }
-  return output
+  return output;
 }
 
-console.log(phoneNumber(5,5))
+module.exports = phoneNumber;
