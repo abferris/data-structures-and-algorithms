@@ -35,16 +35,11 @@ class LinkedList {
    */
   append(input){
     let current = this.head;
-    if(!current){
-      let newNode = new Node(input);
-      current.next= newNode;
-      return;
-    }
-    while(current.next){
+    while(current){
       current = current.next;
     }
     let newNode = new Node(input);
-    current.next= newNode;
+    current= newNode;
   }
 
   insertBefore(input,newVal){
