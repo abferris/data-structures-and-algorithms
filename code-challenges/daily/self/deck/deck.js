@@ -1,6 +1,8 @@
-'use strict'
+'use strict';
 
- const mergeSort = require("./merge-sort.js").mergeSort;
+ const Card = require("../card/card.js");
+ const Hand = require("../hand/hand.js");
+ const mergeSort = require("../hand/merge-sort.js/index.js").mergeSort;
  const stackandqueue = require('./stacksAndQueues.js');
  const Stack = stackandqueue.Stack;
 
@@ -8,104 +10,7 @@
 const suitesKey = ['clubs','diamonds', 'spades', 'hearts']
 
 
-class Card{
-  constructor(number, suite){
-    this.number=number;
-    this.suite=suite;
-  }
-}
 
-class Hand {
-  constructor(cards){
-    this.suitesKey = ['clubs','diamonds', 'spades', 'hearts']
-    if(cards && cards.length===4){
-      // if make a hand with correct suites
-      this.clubs = cards[0];
-      this.diamonds = cards[1];
-      this.hearts = cards[2];
-      this.spades = cards[3];
-      this.cards = [this.clubs,this.diamonds,this.hearts,this.spades];
-     } else if (!cards) {
-      // if no input, an empty  hand is established
-      this.clubs = [];
-      this.diamonds = [];
-      this.hearts = [];
-      this.spades = [];
-      this.cards = [this.clubs,this.diamonds,this.hearts,this.spades];
-    } else {
-      // if there is an input (which should be an array)
-      this.clubs = [];
-      this.diamonds = [];
-      this.hearts = [];
-      this.spades = [];
-      this.cards = [this.clubs,this.diamonds,this.hearts,this.spades];
-      this.unsortedCards = cards
-    }
-  }
-
-  //sort takes in your cards and whatever cards are unsorted
-  sort(){
-    // look at unsorted cards, and if there are any insert the number into the correct suite
-    for (let i = 0; i < this.unsortedCards.length; i++){
-      let j=0;
-      //stop counting if you hit the right suite or go through all suites
-      while( this.suitesKey[j]!==this.unsortedCards[i].suite && j<this.suitesKey[j].length){
-        j++;
-      }
-      if (j===4){
-        this.cards = [];
-        return `Cannot sort ${this.unsortedCards[i]}. Aborting!`
-      }
-      this.cards[j].push(this.unsortedCards[i].number)
-    }
-    // do a quicksort of the cards in every suite lowest to highest
-    for (let k=0; k<this.cards.length; k++){
-      mergeSort(this.cards[k]);
-    }
-  }
-
-  count(){
-    // first count the number of cards
-    let cardsInHand = 0
-    for (let i = 0; i < this.cards.length; i++){
-      cardsInHand += this.cards[i].length;
-    }
-    // if it's not 13 return an error
-    if (cardsInHand !== 13){
-      return "Not Correctly Dealt Hand"
-    }
-    //points start at zero
-    // only highcard points
-    let highCardPoints = 0;
-    // adding to points by counting long suites as points
-    let pointsWithLength = 0;
-    // adding to points by counting short suites as points
-    let pointsWithShort = 0
-    //iterate through each suite
-    for (let i = 0; i < this.cards.length; i++){
-      //look at length
-      let suiteLength = this.cards[i].length; 
-      // shortPoints is 3-length
-      let shortPoints = 3-suiteLength;
-      shortPoints > 0 ? pointsWithShort+=shortpoints : null ;
-      lengthPoints = suiteLength - 4;
-      lengthPoints > 0 ?  pointsWithLength+=lengthPoints : null ;
-
-      // if shortPoints is more than zero add it to points with short
-      // lengthPoints is length-4
-      // if lengthPoints is more than zero add it to points with length
-      //iterate through each card
-      for (let j = 0; j < this.cards[i].length; j++){
-        // if card is a jack(11) and length is more than 2 add 1 to all counts
-        // if card is a queen(12) and length is more than 2 add 2 to all counts
-        // if card is a king and(13) length is more than 1 add 3 to all counts
-        // if card is a ace(14) add 4 points to all counts
-      }
-
-
-    }
-  }
-}
 
 class Deck {
   constructor() {
@@ -114,24 +19,21 @@ class Deck {
     this.diamonds = [2,3,4,5,6,7,8,9,10,11,12,13,14];
     this.hearts = [2,3,4,5,6,7,8,9,10,11,12,13,14];
     this.spades = [2,3,4,5,6,7,8,9,10,11,12,13,14];
-    this.cards = [clubs,diamonds,hearts,spades]
-    this.stack= new Stack
+    this.cards = [clubs,diamonds,hearts,spades];
+    this.stack = new Stack ();
   }
 
   shuffle(){
     let i = 52
     while( i > 0 ) {
-      let suite
-      let number
-      let suiteNum
-      let numberNum
-      while(!suite || !number){
-        suiteNum= Math.floor(Math.random()*suitesKey.length)
-        numberNum = Math.floor(Math.random()*cards[suite].length)
+      let suite;
+      let selectedCard;
+      while( !this.cards[suite][selectedCard] ){
+        suite= Math.floor(Math.random()*suitesKey.length);
+        selectedCard = Math.floor(Math.random()*cards[suite].length);
       }
       //splice card out of deck
-      suite = this
-
+      let number = this.cards[suite].splice(selectedCard, selectedCard+1);
       let card = new Card(number,suite)
 
       this.stack.push(card)
@@ -140,21 +42,54 @@ class Deck {
 
 }
 
-class game{
-  constructor(){
-    this.deck = new Deck
-    this.north = new Hand
-    this.east = new Hand
-    this.south = new Hand
-    this.west = new Hand
+class Game{
+  constructor(dealer){
+    this.deck = new Deck();
+
+    this.north = new Hand();
+    this.east = new Hand();
+    this.south = new Hand();
+    this.west = new Hand();
+    //circular linked list and partner is across
+    this.north.next = this.east;
+    this.north.partner = this.south;
+    this.east.next = this.south;
+    this.east.partner = this.west;
+    this.south.next = this.west;
+    this.south.partner = this.north;
+    this.west.next = this.north;
+    this.west.partner = this.east;
+    //setting dealer. Default (incorrect input or no input dealer is north)
+    if (dealer === "east"){
+      this.dealer = this.east;
+    }
+    if (dealer === "south"){
+      this.dealer = this.south;
+    }
+    if (dealer === "west"){
+      this.dealer = this.west;
+    }else{
+      this.dealer = this.north;
+    }
+
   }
 
   deal(){
-   this.deck.shuffle()
+    this.deck.shuffle()
+    let current = dealer.next;
+    while(this.deck.stack.top){
+     let card =this.deck.stack.pop();
+     current.unsortedCards.push(card);
+     current=current.next;
+    }
+    for(i=0; i<4; i++){
+      current.sort();
+      current=current.next
+    }
   }
 
 
 
 }
 
-
+module.exports = {Deck, Card, Hand, Game};
